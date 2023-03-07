@@ -1,0 +1,6 @@
+hadoop fs -mkdir -p input
+hdfs dfs -put ./input/* input
+hadoop jar /opt/hadoop-3.2.4/share/hadoop/tools/lib/hadoop-streaming-3.2.4.jar -input input -output output -file mapper.py -mapper "python3 mapper.py" -file reducer.py -reducer "python3 reducer.py"
+hdfs dfs -ls
+hdfs dfs -ls output1
+hdfs dfs -cat output1/part-00000
