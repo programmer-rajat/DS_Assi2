@@ -1,0 +1,5 @@
+/opt/hadoop-3.2.4/share/hadoop/tools/lib/hadoop-streaming-3.2.4.jar
+/input.txt
+input
+output
+.
